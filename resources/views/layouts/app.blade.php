@@ -15,7 +15,7 @@
         @include('partials.header')
         @include('partials.sidebar')
 
-        <main class="container mx-auto my-5">
+        <main class="container mx-auto my-5 px-4">
             <h1 class="text-6xl">Livewire Examples</h1>
             @yield('content')
         </main>
