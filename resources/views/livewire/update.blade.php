@@ -1,18 +1,16 @@
 <form>
     <input type="hidden" wire:model="post_id">
     <div class="mb-3">
-        <label for="title">Title:</label>
         <input
-            class="w-full px-3 py-2 mb-2 text-base text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline"
+            class="w-full px-5 py-3 border border-gray-400 rounded outline-none focus:shadow-outline"
             type="text" placeholder="Enter Title" wire:model="title" id="title"/>
         @error('title')
         <span class="text-red-500 text-sm">{{ $message }}</span>
         @enderror
     </div>
     <div class="mb-3">
-        <label for="body">Body:</label>
         <textarea
-                  class="w-full h-20 px-3 mb-2 text-base text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                  class="w-full h-40 px-5 py-3 border border-gray-400 rounded outline-none focus:shadow-outline"
                   id="body" wire:model="body"
                   placeholder="Enter Body"></textarea>
 
