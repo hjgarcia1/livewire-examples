@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html, body {
+html,
+body {
     height: 100%;
 }
 
 .app-grid {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
+}
+
+.app-grid header {
+    grid-area: header;
+}
+
+.app-grid > main {
+    grid-area: content;
+}
+
+.app-grid > aside {
+    grid-area: sidebar;
+}
+
+.app-grid > footer {
+    grid-area: footer;
 }

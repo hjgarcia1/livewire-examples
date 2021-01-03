@@ -13,11 +13,12 @@
 <body>
     <div class="app-grid h-full">
         @include('partials.header')
+        @include('partials.sidebar')
 
-        <div class="container mx-auto my-5">
+        <main class="container mx-auto my-5">
             <h1 class="text-6xl">Livewire Examples</h1>
             @yield('content')
-        </div>
+        </main>
 
         @include('partials.footer')
     </div>
