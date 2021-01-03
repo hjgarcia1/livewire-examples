@@ -1,12 +1,12 @@
-<header class="bg-gray-100">
+<header class="bg-gray-900">
     <nav class="container mx-auto flex items-center">
         <a href="/" class="mr-auto block m-1">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
             </svg>
         </a>
-        <a href="https://twitter.com/hjgarcia1" target="blank" class="block py-2 px-3 bg-gray-300 h-full">
-            <svg viewBox="328 355 335 276" class="w-6 h-6 fill-current hover:text-blue-500" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <a href="https://twitter.com/hjgarcia1" target="blank" class="block py-2 px-3 bg-gray-700">
+            <svg viewBox="328 355 335 276" class="w-6 h-6 text-white fill-current hover:text-blue-500" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-width="2" d="
                         M 630, 425
                         A 195, 195 0 0 1 331, 600
