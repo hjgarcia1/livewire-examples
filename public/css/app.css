@@ -31168,6 +31168,15 @@ video {
           animation: bounce 1s infinite;
 }
 
+html, body {
+  height: 100%;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
