@@ -13,6 +13,7 @@ class UserSearch extends Component
     public $query = '';
     public $page = 1;
     public $users;
+    public $searching = false;
 
     protected $queryString = [
         'query' => ['except' => ''],
@@ -21,6 +22,10 @@ class UserSearch extends Component
 
     public function render()
     {
+        if($this->query) {
+            $this->searching = true;
+        }
+
         $users = User::where('name', 'LIKE', '%' . $this->query . '%')->paginate(12);
         $this->users = \collect($users->items());
 
@@ -29,10 +34,23 @@ class UserSearch extends Component
 
     public function search()
     {
+        $this->searching = true;
+
         $this->page = 1;
 
         $users = User::where('name', 'LIKE', '%' . $this->query . '%')->paginate(12);
 
+        $this->users = \collect($users->items());
+    }
+
+    public function clear()
+    {
+        $this->searching = false;
+        $this->query = '';
+
+        $this->page = 1;
+
+        $users = User::where('name', 'LIKE', '%' . $this->query . '%')->paginate(12);
         $this->users = \collect($users->items());
     }
 
