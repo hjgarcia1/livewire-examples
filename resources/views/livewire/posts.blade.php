@@ -1,9 +1,5 @@
 <div class="my-5">
-    @if (session()->has('message'))
-        <div class="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg" role="alert">
-            {{ session('message') }}
-        </div>
-    @endif
+    @include('partials.alerts')
 
     @if ($updatedMode)
         @include('livewire.update')
@@ -11,7 +7,7 @@
         @include('livewire.create')
     @endif
 
-    <table class="shadow-lg bg-white my-5">
+    <table class="shadow-lg bg-white my-5 w-full">
         <thead>
         <tr>
             <th class="bg-blue-100 border text-left px-8 py-4">No.</th>

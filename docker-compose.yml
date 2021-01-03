@@ -10,7 +10,7 @@ services:
       - "3010:3000"
       - "3011:3001"
     volumes:
-      - .:/var/www/html:cached
+      - .:/var/www/html:delegated
     environment:
       APACHE_DOCUMENT_ROOT: public/
       PHP_EXTENSION_GD: 1

@@ -29,7 +29,7 @@ class Posts extends Component
 
         Post::create($validData);
 
-        \session()->flash('message','Post created successfully.');
+        \session()->flash('success','Post created successfully.');
 
         $this->resetInputFields();
     }
@@ -49,7 +49,7 @@ class Posts extends Component
 
     public function update()
     {
-        $validData = $this->validate([
+        $this->validate([
             'title' => 'required',
             'body' => 'required',
         ]);
@@ -62,7 +62,7 @@ class Posts extends Component
 
         $this->updatedMode = false;
 
-        \session()->flash('message','Post updated successfully.');
+        \session()->flash('success','Post updated successfully.');
 
         $this->resetInputFields();
     }
@@ -80,7 +80,7 @@ class Posts extends Component
     {
         Post::find($id)->delete();
 
-        \session()->flash('message','Post deleted Successfully');
+        \session()->flash('success','Post deleted Successfully');
     }
 
     /**
